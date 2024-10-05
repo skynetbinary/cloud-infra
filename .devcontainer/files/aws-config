@@ -1,0 +1,11 @@
+[sso-session aws-session]
+sso_start_url =
+sso_region = us-west-2
+sso_registration_scopes = sso:account:access
+
+[profile primary-admin]
+sso_session = aws-session
+sso_account_id =
+sso_role_name = admin
+region = us-west-2
+output = json
