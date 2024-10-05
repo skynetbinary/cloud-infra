@@ -1,0 +1,3 @@
+aws-vault            https://github.com/karancode/asdf-aws-vault.git            678cacf
+poetry               https://github.com/asdf-community/asdf-poetry.git          e2a3c34
+pulumi               https://github.com/canha/asdf-pulumi.git                   99d675b
