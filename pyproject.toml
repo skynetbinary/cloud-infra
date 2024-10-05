@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "cloud-infra"
+version = "0.1.0"
+description = ""
+authors = ["Talha Ashraf <talhashraf@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.28.0"
+ruff = "^0.6.7"
+
+
+[tool.poetry.group.cloud.dependencies]
+pulumi = "^3.133.0"
+pulumi-aws = "^6.52.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks.lint]
+help = "Run ruff lint and format checks"
+args = { target = { options = ["--target", "-t"], default = "." }}
+sequence = [
+    "poetry run ruff check $target",
+    "poetry run ruff format --check $target"
+]
+default_item_type = "cmd"
+
+[tool.poe.tasks.lint-fix]
+help = "Fix ruff lint and format errors"
+args = { target = { options = ["--target", "-t"], default = "." }}
+sequence = [
+    "poetry run ruff check --fix $target",
+    "poetry run ruff format $target"
+]
+default_item_type = "cmd"
