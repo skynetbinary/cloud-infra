@@ -1,0 +1,4 @@
+name: identity-center
+description: Creates identity center and related resources in the primary AWS account.
+runtime:
+  name: python

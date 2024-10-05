@@ -1,0 +1,8 @@
+config:
+  identity-center:aws-account-id: ""
+  identity-center:instance-arn: ""
+  identity-center:identitystore-id: ""
+  identity-center:admin-users:
+  - first_name: "John"
+    last_name: "Doe"
+    email: "johndoe@gmail.com"
