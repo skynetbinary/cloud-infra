@@ -1,0 +1,4 @@
+name: bootstrap-pulumi
+description: Infrastructure to setup Pulumi
+runtime:
+  name: python
